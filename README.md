@@ -14,7 +14,7 @@ Fast-sync your Zclassic node with pre-downloaded blockchain data.
 Cryptographic parameters required by zclassicd for shielded transactions.
 
 - **Release**: [zcash-params-v1](https://github.com/VictorLux/zclassic-bootstrap/releases/tag/zcash-params-v1)
-- **Total Size**: 703 MB (compressed) / 777 MB (uncompressed)
+- **Total Size**: 1.54 GB (compressed) / 1.69 GB (uncompressed)
 - **Compression**: zstd level 19
 
 ### Files
@@ -24,6 +24,7 @@ Cryptographic parameters required by zclassicd for shielded transactions.
 | sapling-spend.params.zst | 45 MB | 47 MB | Prove shielded spends |
 | sapling-output.params.zst | 3.2 MB | 3.5 MB | Create shielded outputs |
 | sprout-groth16.params.zst | 655 MB | 725 MB | Legacy Sprout proofs |
+| sprout-proving.key.zst | 837 MB | 868 MB | Generate Sprout proofs |
 | sprout-verifying.key.zst | 1.4 KB | 1.4 KB | Verify Sprout proofs |
 
 ### Installation Location
