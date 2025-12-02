@@ -91,16 +91,29 @@ zstd -d ~/Downloads/zclassic-bootstrap.tar.zst -o - | tar -x --strip-components=
 zclassicd
 ```
 
-### Windows
+### Windows (PowerShell)
 ```powershell
 # Stop zclassicd if running
-# Use Task Manager or: taskkill /IM zclassicd.exe /F
+taskkill /IM zclassicd.exe /F 2>nul
 
 # Backup your wallet first!
-# Copy %APPDATA%\Zclassic\wallet.dat to a safe location
+copy "%APPDATA%\Zclassic\wallet.dat" "%USERPROFILE%\wallet.dat.backup"
 
-# Extract bootstrap to %APPDATA%\Zclassic
-# Use 7-Zip with zstd plugin or WSL
+# Install zstd if not present (choose one):
+# winget install Facebook.zstd
+# OR: choco install zstd
+
+# Navigate to Zclassic data directory
+cd %APPDATA%\Zclassic
+
+# Extract bootstrap (requires zstd in PATH)
+zstd -d "%USERPROFILE%\Downloads\zclassic-bootstrap.tar.zst" -o - | tar -xf -
+
+# Alternative: Use 7-Zip with zstd plugin
+# Or use WSL: wsl zstd -d /mnt/c/Users/YOU/Downloads/zclassic-bootstrap.tar.zst -o - | wsl tar -x
+
+# Start zclassicd
+zclassicd
 ```
 
 ## File List
