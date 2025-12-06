@@ -4,9 +4,9 @@ Fast-sync your Zclassic node with pre-downloaded blockchain data.
 
 ## Current Bootstrap
 
-- **Block Height**: 2,916,559
-- **Date**: 2025-11-20
-- **Total Size**: 7.8 GB (compressed)
+- **Block Height**: 2933984
+- **Date**: 2025-12-06
+- **Total Size**: 7.8G (compressed)
 - **Parts**: 5 files
 
 ## Zcash Parameters
@@ -33,12 +33,12 @@ Cryptographic parameters required by zclassicd for shielded transactions.
 - **Linux**: `~/.zcash-params/`
 - **Windows**: `%APPDATA%\ZcashParams\`
 
-The Zipher wallet automatically downloads and installs these parameters during bootstrap.
+The ZipherX wallet automatically downloads and installs these parameters during bootstrap.
 
 ## Download
 
-### Automatic (via Zipher Wallet)
-The Zipher wallet will automatically download and install this bootstrap when needed.
+### Automatic (via ZipherX Wallet)
+The ZipherX wallet will automatically download and install this bootstrap when needed.
 
 ### Manual Download
 
@@ -99,7 +99,7 @@ taskkill /IM zclassicd.exe /F 2>nul
 # Backup your wallet first!
 copy "%APPDATA%\Zclassic\wallet.dat" "%USERPROFILE%\wallet.dat.backup"
 
-# Install zstd if not present (choose one):
+# Install zstd if not present (using winget or chocolatey)
 # winget install Facebook.zstd
 # OR: choco install zstd
 
@@ -109,8 +109,8 @@ cd %APPDATA%\Zclassic
 # Extract bootstrap (requires zstd in PATH)
 zstd -d "%USERPROFILE%\Downloads\zclassic-bootstrap.tar.zst" -o - | tar -xf -
 
-# Alternative: Use 7-Zip with zstd plugin
-# Or use WSL: wsl zstd -d /mnt/c/Users/YOU/Downloads/zclassic-bootstrap.tar.zst -o - | wsl tar -x
+# Alternative: Use WSL if available
+# wsl zstd -d ~/Downloads/zclassic-bootstrap.tar.zst -o - | wsl tar -x --strip-components=1
 
 # Start zclassicd
 zclassicd
@@ -118,11 +118,11 @@ zclassicd
 
 ## File List
 
-- `zclassic-bootstrap-block-2916559-20251120_201519-part-01.part` (1.9G)
-- `zclassic-bootstrap-block-2916559-20251120_201519-part-02.part` (1.9G)
-- `zclassic-bootstrap-block-2916559-20251120_201519-part-03.part` (1.9G)
-- `zclassic-bootstrap-block-2916559-20251120_201519-part-04.part` (1.9G)
-- `zclassic-bootstrap-block-2916559-20251120_201519-part-05.part` (313M)
+- `zclassic-bootstrap-block-2933984-20251206_052149-part-01.part` (1.9G)
+- `zclassic-bootstrap-block-2933984-20251206_052149-part-02.part` (1.9G)
+- `zclassic-bootstrap-block-2933984-20251206_052149-part-03.part` (1.9G)
+- `zclassic-bootstrap-block-2933984-20251206_052149-part-04.part` (1.9G)
+- `zclassic-bootstrap-block-2933984-20251206_052149-part-05.part` (318M)
 - `bootstrap-checksums.txt`
 - `download-and-combine.sh`
 - `BOOTSTRAP_README.md`
@@ -130,11 +130,11 @@ zclassicd
 ## Checksums
 
 ```
-0d6b91970980ec6278fa729ceafd5715cd6ae4860150aa1a015e24b7d80f54eb  zclassic-bootstrap-block-2916559-20251120_201519-part-01.part
-bff55ee9003fa642148a49e1f00d9a4f557fd4682c010c88976aa6c4e6d3163a  zclassic-bootstrap-block-2916559-20251120_201519-part-02.part
-1b37ef1de7a7acb477c6b5ec54494ed6d04a594a777a6970aea536b8b5c556b8  zclassic-bootstrap-block-2916559-20251120_201519-part-03.part
-7236b2baac22e64ccf7842d4d5aeaa110551ea41daa77b14db9e7704dc9fd2d1  zclassic-bootstrap-block-2916559-20251120_201519-part-04.part
-5d252c85f29888e3aa0bedf3ab74b17a99fe75558d34e17da403677bca2160b8  zclassic-bootstrap-block-2916559-20251120_201519-part-05.part
+c6fc052add092c186f0cfe2e136b61b1e79c45d5c504c97c4a5522fddea334b7  zclassic-bootstrap-block-2933984-20251206_052149-part-01.part
+2d11a48c027271addb13a881498185938252b636e6844d64684b78d4d74f1b79  zclassic-bootstrap-block-2933984-20251206_052149-part-02.part
+6a4d818f3654ff7583ae9487f98e5e47bce81b0012530ede0bdbcb2423a6dcec  zclassic-bootstrap-block-2933984-20251206_052149-part-03.part
+6e6bdfacb333abd95bc162bb19e904d2b377550929166ac175692239e7d23055  zclassic-bootstrap-block-2933984-20251206_052149-part-04.part
+0c5018efb15859a88955101ad618adbb38e62ef81ce4de1f62a7e699a6f15bf7  zclassic-bootstrap-block-2933984-20251206_052149-part-05.part
 ```
 
 ## Archive Contents
@@ -162,13 +162,13 @@ bff55ee9003fa642148a49e1f00d9a4f557fd4682c010c88976aa6c4e6d3163a  zclassic-boots
 
 - **Always backup wallet.dat before using bootstrap**
 - Verify SHA256 checksums before extraction
-- Compatible with Zclassic Core 1.x and Zipher wallet
+- Compatible with Zclassic Core 1.x and ZipherX wallet
 
 ## Links
 
-- [Zipher Wallet](https://github.com/VictorLux/Zipher) - Modern Zclassic wallet with automatic bootstrap
+- [ZipherX Wallet](https://github.com/VictorLux/ZipherX) - Modern Zclassic wallet with automatic bootstrap
 - [Zclassic](https://zclassic.org/) - Official Zclassic website
 
 ---
 
-🤖 Generated with Zipher Bootstrap Creator
+🤖 Generated with ZipherX Bootstrap Creator
