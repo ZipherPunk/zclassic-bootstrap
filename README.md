@@ -2,6 +2,16 @@
 
 Fast-sync your Zclassic node with pre-downloaded blockchain data.
 
+> **DISCLAIMER**: This software and data are provided **"AS IS"**, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. By downloading or using the bootstrap data, you acknowledge and agree that:
+>
+> - **USE AT YOUR OWN RISK.** The authors and contributors are not liable for any loss of funds, data corruption, or damages arising from the use of this software or data.
+> - **ALWAYS VERIFY SHA256 CHECKSUMS** before extracting any downloaded file. Do not trust files that fail checksum verification.
+> - **ALWAYS BACKUP `wallet.dat` BEFORE USING BOOTSTRAP.** Failure to do so may result in permanent, irreversible loss of funds.
+> - **NO FINANCIAL ADVICE.** Nothing in this repository constitutes financial, investment, or legal advice. Cryptocurrency involves significant risk.
+> - **NOT AUDITED.** The blockchain data in this bootstrap has not been independently audited. Use trusted sources only.
+> - **STOP YOUR NODE** (`zclassicd`) before extracting bootstrap data. Extracting while the node is running will corrupt your database.
+> - The bootstrap contains **publicly available blockchain data only** (blocks, UTXO set, index) — no private keys, seeds, or sensitive information are included.
+
 ## Current Bootstrap
 
 - **Block Height**: 2933984
