@@ -13,7 +13,7 @@ Fast-sync your Zclassic node with pre-downloaded blockchain data.
 
 Cryptographic parameters required by zclassicd for shielded transactions.
 
-- **Release**: [zcash-params-v1](https://github.com/VictorLux/zclassic-bootstrap/releases/tag/zcash-params-v1)
+- **Release**: [zcash-params-v1](https://github.com/ZipherPunk/zclassic-bootstrap/releases/tag/zcash-params-v1)
 - **Total Size**: 1.54 GB (compressed) / 1.69 GB (uncompressed)
 - **Compression**: zstd level 19
 
@@ -45,13 +45,13 @@ The ZipherX wallet will automatically download and install this bootstrap when n
 #### Option 1: Using GitHub CLI (Recommended)
 ```bash
 # Download the helper script
-gh release download --repo VictorLux/zclassic-bootstrap --pattern "download-and-combine.sh"
+gh release download --repo ZipherPunk/zclassic-bootstrap --pattern "download-and-combine.sh"
 chmod +x download-and-combine.sh
 ./download-and-combine.sh
 ```
 
 #### Option 2: Manual Download
-1. Go to the [latest release](https://github.com/VictorLux/zclassic-bootstrap/releases/latest)
+1. Go to the [latest release](https://github.com/ZipherPunk/zclassic-bootstrap/releases/latest)
 2. Download all `zclassic-bootstrap-*-part-*.part` files
 3. Download `bootstrap-checksums.txt`
 4. Verify checksums: `shasum -a 256 -c bootstrap-checksums.txt`
@@ -166,7 +166,7 @@ c6fc052add092c186f0cfe2e136b61b1e79c45d5c504c97c4a5522fddea334b7  zclassic-boots
 
 ## Links
 
-- [ZipherX Wallet](https://github.com/VictorLux/ZipherX) - Modern Zclassic wallet with automatic bootstrap
+- [ZipherX Wallet](https://github.com/ZipherPunk/ZipherX) - Modern Zclassic wallet with automatic bootstrap
 - [Zclassic](https://zclassic.org/) - Official Zclassic website
 
 ---
